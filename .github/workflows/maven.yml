@@ -33,6 +33,8 @@ jobs:
 
     - name: Build Docker Image
       uses: ./.github/actions/docker_build
+      with:
+        {{ input-name }}: {{ input-value }} 
 
     - name: Docker list images
       run: docker image ls
